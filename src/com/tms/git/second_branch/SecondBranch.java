@@ -1,5 +1,7 @@
 package com.tms.git.second_branch;
 
+import java.util.Objects;
+
 public class SecondBranch {
 
     private String name;
@@ -20,4 +22,19 @@ public class SecondBranch {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SecondBranch)) return false;
+        SecondBranch that = (SecondBranch) o;
+        return Objects.equals(name, that.name) && Objects.equals(password, that.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, password);
+    }
+
+
 }
