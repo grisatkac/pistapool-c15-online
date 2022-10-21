@@ -36,5 +36,11 @@ public class SecondBranch {
         return Objects.hash(name, password);
     }
 
-
+    @Override
+    public String toString() {
+        return "SecondBranch{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
